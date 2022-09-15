@@ -1,0 +1,38 @@
+interface firstinterface
+{
+	void mymethod();
+}
+interface secondinterface
+{
+	void myothermethod();
+}
+class third implements firstinterface , secondinterface
+{
+
+	@Override
+	public void myothermethod() {
+	System.out.println("secondinterface");
+	System.out.println("myothermethod");
+		
+	}
+
+	@Override
+	public void mymethod() {
+		System.out.println("firstinterface");
+		System.out.println("mymethod");
+		
+	}
+	
+}
+public class MultiInterface {
+
+	public static void main(String[] args) {
+		third t= new third();
+		t.mymethod();
+		t.myothermethod();
+		
+
+	}
+
+}
+----------------------------
